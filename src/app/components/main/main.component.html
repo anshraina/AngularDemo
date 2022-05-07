@@ -1,0 +1,33 @@
+<h1>Hello This is my angular application sds</h1>
+
+
+<h3>{{pageTitle}}</h3>  <!-- THis is an interpolation-->
+<h3>{{pageTitle | lowercase}}</h3>  
+
+<button (click)="clickMe()"> Click me</button> <!-- Event Biniding-->
+<button (click)="reset()"> Reset me</button>
+
+<img [src]="imageFile" alt="This is an image"> <!-- Property / Attribute binding-->  <!-- Two way Binding-->
+
+
+<h1>{{count | currency: 'EUR'}}</h1> 
+
+<div class="ifElse" *ngIf="isVisible; else elseBlock1">
+    <h1>I Am in If Condition</h1>
+</div>
+
+<ng-template #elseBlock1>
+  <h1>I Am in Else  Condition</h1>
+</ng-template>
+
+<button (click)="onOff()"> On OFF</button>
+
+
+
+<div class="ifElse" *ngFor="let student of students; index as i">
+  {{i}}
+  {{student.name | lowercase}}
+  {{student.prn}}
+  {{student.middleName}}
+
+</div>
